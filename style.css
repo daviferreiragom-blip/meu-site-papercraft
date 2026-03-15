@@ -1,0 +1,162 @@
+/* Configurações Gerais */
+:root {
+    --cor-vidro: rgba(255, 255, 255, 0.9);
+    --cor-accent: #e67e22; /* Laranja acobreado */
+    --fundo-header: #fafafa; /* Fundo creme muito claro para o header */
+    --texto-primario: #2c3e50;
+    --texto-light: #fff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto-primario);
+    scroll-behavior: smooth;
+    background-color: #f0f0f0; /* Fundo base neutro */
+}
+
+/* Header Premium: Garante a Qualidade da Imagem */
+.header-premium {
+    background-color: var(--fundo-header);
+    padding: 60px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-wrapper {
+    flex: 1;
+}
+
+.logo-wrapper h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #333;
+}
+
+.logo-wrapper p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.foto-autores {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* ESTILO CRÍTICO PARA QUALIDADE: Imagem nítida e contida */
+.imagem-nitida {
+    width: 100%; /* Ocupa a largura do flex item */
+    height: auto; /* Mantém a proporção original */
+    max-width: 500px; /* Limita a largura máxima para não esticar */
+    border-radius: 15px; /* Cantos suaves */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra elegante */
+    object-fit: contain; /* Garante que a imagem caiba sem cortes ou distorção */
+    border: 1px solid #ddd; /* Moldura discreta */
+}
+
+/* O Domo como Fundo da Página (começa após o header) */
+.fundo-domo {
+    background-image: url('1000622980.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+}
+
+/* Conteúdo Principal */
+.conteudo-site {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sobre-nos {
+    background: var(--cor-vidro);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Grid de Esculturas separadas */
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.card-vidro {
+    background: var(--cor-vidro);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.card-vidro:hover {
+    transform: translateY(-10px);
+}
+
+.moldura-imagem {
+    height: 400px;
+    overflow: hidden;
+}
+
+.moldura-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-texto {
+    padding: 25px;
+    text-align: center;
+}
+
+.btn-pedido {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: var(--cor-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* Botão de Som */
+#controle-audio {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    margin-top: 50px;
+}
+

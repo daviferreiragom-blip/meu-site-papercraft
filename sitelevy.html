@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katherynne & Levy | Galeria Papercraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="musica-galeria" loop>
+        <source src="musica-tranquila.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="controle-audio" onclick="toggleAudio()">🔈 Ativar Som</button>
+
+    <header class="header-premium">
+        <div class="header-conteudo">
+            <div class="logo-wrapper">
+                <h1>Katherynne & Levy</h1>
+                <p>Esculturas em Papercraft de Alta Precisão</p>
+            </div>
+            <div class="foto-autores">
+                <img src="irmaos.jpg" alt="Os artesãos Katherynne e Levy" class="imagem-nitida">
+            </div>
+        </div>
+    </header>
+
+    <div class="fundo-domo">
+        <main class="conteudo-site">
+            
+            <section class="sobre-nos">
+                <h2>Nossa Parceria Criativa</h2>
+                <p>Irmãos unidos pela paixão de transformar papel em arte viva. Cada dobra e cada corte é fruto de nossa dedicação em criar peças que surpreendem pelos detalhes e geometria.</p>
+            </section>
+
+            <section class="galeria-grid">
+                <h2>Coleções em Destaque</h2>
+                
+                <div class="container-cards">
+                    <div class="card-vidro">
+                        <div class="moldura-imagem">
+                            <img src="1000607804.jpg" alt="Sylveon Papercraft">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Sylveon</h3>
+                            <p>Detalhes facetados e acabamento premium.</p>
+                            <a href="#" class="btn-pedido">Encomendar</a>
+                        </div>
+                    </div>
+
+                    <div class="card-vidro">
+                        <div class="moldura-imagem">
+                            <img src="1000607805.jpg" alt="Corsola Papercraft">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Corsola</h3>
+                            <p>Escultura geométrica com tons vibrantes.</p>
+                            <a href="#" class="btn-pedido">Encomendar</a>
+                        </div>
+                    </div>
+
+                    <div class="card-vidro">
+                        <div class="moldura-imagem">
+                            <img src="chikorita.jpg" alt="Chikorita Papercraft">
+                        </div>
+                        <div class="card-texto">
+                            <h3>Chikorita</h3>
+                            <p>Design botânico com cores naturais e suaves.</p>
+                            <a href="#" class="btn-pedido">Encomendar</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Katherynne & Levy | Paper Art Gallery</p>
+    </footer>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("musica-galeria");
+            var btn = document.getElementById("controle-audio");
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = "🔊 Som Ligado";
+            } else {
+                audio.pause();
+                btn.innerHTML = "🔈 Som Mudo";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
