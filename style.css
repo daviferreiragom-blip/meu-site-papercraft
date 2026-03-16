@@ -1,20 +1,25 @@
 /* Configurações Gerais */
 :root {
     --cor-vidro: rgba(255, 255, 255, 0.9);
-    --cor-accent: #e67e22; /* Laranja acobreado */
-    --cor-accent-hover: #d35400; /* Laranja mais escuro para o feedback */
-    --fundo-header: #fafafa; /* Fundo creme muito claro para o header */
+    --cor-accent: #e67e22;
+    --cor-accent-hover: #d35400;
+    --fundo-header: #fafafa;
     --texto-primario: #2c3e50;
-    --texto-light: #fff;
+    --azul-levy: #0a3d62; /* Azul Marinho Profundo para elegância */
+    --azul-brilhante: #007bff;
 }
 
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--texto-primario);
     scroll-behavior: smooth;
-    background-color: #f0f0f0; /* Fundo base neutro */
+    background-color: #f0f0f0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
 /* Header Premium */
@@ -33,37 +38,105 @@ body, html {
     gap: 40px;
 }
 
+/* --- ESTILO REFINADO DO LOGO --- */
 .logo-wrapper {
     flex: 1;
 }
 
 .logo-wrapper h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #333;
+    display: flex;
+    align-items: baseline; /* Alinha os nomes pela base do texto */
+    gap: 15px;
+    font-weight: 700;
 }
 
-.logo-wrapper p {
-    font-size: 1.1rem;
+/* Katherynne: Arredondado e Colorido */
+.nome-katherynne {
+    font-family: 'Comfortaa', cursive;
+    text-transform: none;
+    background-image: linear-gradient(
+        to right, 
+        #4facfe, 
+        #43e97b, 
+        #f6d365, 
+        #ff9a9e, 
+        #ee9ca7
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilo para o "&" */
+.e-comercial {
+    font-family: 'Cinzel', serif;
+    color: #999;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Levy: Clássico e Serifado em Caixa Alta */
+.nome-levy {
+    font-family: 'Cinzel', serif;
+    color: var(--azul-levy);
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
     color: #7f8c8d;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Mais espaço entre letras para ar luxuoso */
 }
 
-.foto-autores {
+/* Container do Perfil com Botão de Som */
+.perfil-container {
+    position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
+.btn-som-imagem {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-som-imagem:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+.foto-autores {
+    width: 100%;
+    max-width: 450px;
+}
+
 .imagem-nitida {
     width: 100%;
     height: auto;
-    max-width: 500px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    object-fit: contain;
-    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+    border: 1px solid #eee;
 }
 
 /* O Domo como Fundo da Página */
@@ -89,7 +162,7 @@ body, html {
     border-radius: 15px;
     text-align: center;
     margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* Grid de Esculturas */
@@ -99,24 +172,21 @@ body, html {
     gap: 40px;
 }
 
-/* Card com Feedback Visual */
 .card-vidro {
     background: var(--cor-vidro);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .card-vidro:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-/* Moldura e Efeito na Imagem */
 .moldura-imagem {
     height: 400px;
     overflow: hidden;
@@ -125,12 +195,12 @@ body, html {
 .moldura-imagem img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantém o padrão mesmo com fotos de tamanhos diferentes */
-    transition: transform 0.5s ease;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
 .card-vidro:hover .moldura-imagem img {
-    transform: scale(1.1); /* Zoom suave na peça ao passar o mouse */
+    transform: scale(1.08);
 }
 
 .card-texto {
@@ -138,7 +208,6 @@ body, html {
     text-align: center;
 }
 
-/* Botão de Encomenda com Feedback */
 .btn-pedido {
     display: inline-block;
     margin-top: 15px;
@@ -149,43 +218,38 @@ body, html {
     border-radius: 50px;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
 }
 
 .btn-pedido:hover {
     background-color: var(--cor-accent-hover);
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
-}
-
-.btn-pedido:active {
-    transform: scale(0.95);
-}
-
-/* Botão de Som */
-#controle-audio {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: none;
-    background: white;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: background 0.3s;
-}
-
-#controle-audio:hover {
-    background: #f9f9f9;
 }
 
 footer {
     text-align: center;
     padding: 40px;
-    background: white;
+    background: #fff;
     margin-top: 50px;
-    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #999;
 }
 
+/* Ajustes Celular */
+@media (max-width: 768px) {
+    .header-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-wrapper h1 {
+        font-size: 2.2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .subtitulo {
+        letter-spacing: 2px;
+    }
+    .btn-som-imagem {
+        top: 10px;
+        right: 10px;
+    }
+}
