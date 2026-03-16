@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katherynne & Levy | Galeria Papercraft</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Comfortaa:wght@400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,16 +15,24 @@
         <source src="musica-tranquila.mp3" type="audio/mpeg">
     </audio>
 
-    <button id="controle-audio" onclick="toggleAudio()">🔈 Ativar Som</button>
-
     <header class="header-premium">
         <div class="header-conteudo">
             <div class="logo-wrapper">
-                <h1>Katherynne & Levy</h1>
-                <p>Esculturas em Papercraft de Alta Precisão</p>
+                <h1>
+                    <span class="nome-katherynne">Katherynne</span> 
+                    <span class="e-comercial">&</span> 
+                    <span class="nome-levy">LEVY</span>
+                </h1>
+                <p class="subtitulo">Esculturas em Papercraft de Alta Precisão</p>
             </div>
-            <div class="foto-autores">
-                <img src="irmaos.jpg" alt="Os artesãos Katherynne e Levy" class="imagem-nitida">
+            
+            <div class="perfil-container">
+                <button id="controle-audio" class="btn-som-imagem" onclick="toggleAudio()">
+                    <span id="icone-som">🔊</span> Ativar Som
+                </button>
+                <div class="foto-autores">
+                    <img src="irmaos.jpg" alt="Os artesãos Katherynne e Levy" class="imagem-nitida">
+                </div>
             </div>
         </div>
     </header>
@@ -48,24 +59,6 @@
                     </div>
 
                     <div class="card-vidro">
-                        <div class="moldura-imagem"><img src="1000607805.jpg" alt="Corsola"></div>
-                        <div class="card-texto">
-                            <h3>Corsola</h3>
-                            <p>Escultura geométrica com tons vibrantes.</p>
-                            <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20o%20Corsola." target="_blank" class="btn-pedido">Encomendar</a>
-                        </div>
-                    </div>
-
-                    <div class="card-vidro">
-                        <div class="moldura-imagem"><img src="chikorita.jpg" alt="Chikorita"></div>
-                        <div class="card-texto">
-                            <h3>Chikorita</h3>
-                            <p>Design botânico com cores naturais.</p>
-                            <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20a%20Chikorita." target="_blank" class="btn-pedido">Encomendar</a>
-                        </div>
-                    </div>
-
-                    <div class="card-vidro">
                         <div class="moldura-imagem"><img src="1000623197.jpg" alt="Charizard"></div>
                         <div class="card-texto">
                             <h3>Charizard</h3>
@@ -84,20 +77,20 @@
                     </div>
 
                     <div class="card-vidro">
-                        <div class="moldura-imagem"><img src="1000623196.jpg" alt="Máscara"></div>
-                        <div class="card-texto">
-                            <h3>Máscara Mística</h3>
-                            <p>Arte conceitual para decoração de parede.</p>
-                            <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20a%20Máscara." target="_blank" class="btn-pedido">Encomendar</a>
-                        </div>
-                    </div>
-
-                    <div class="card-vidro">
                         <div class="moldura-imagem"><img src="1000623195.jpg" alt="Minccino"></div>
                         <div class="card-texto">
                             <h3>Minccino</h3>
                             <p>Pequeno notável em tons de cinza e rosa.</p>
                             <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20o%20Minccino." target="_blank" class="btn-pedido">Encomendar</a>
+                        </div>
+                    </div>
+
+                    <div class="card-vidro">
+                        <div class="moldura-imagem"><img src="1000623196.jpg" alt="Máscara"></div>
+                        <div class="card-texto">
+                            <h3>Máscara Mística</h3>
+                            <p>Arte conceitual para decoração de parede.</p>
+                            <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20a%20Máscara." target="_blank" class="btn-pedido">Encomendar</a>
                         </div>
                     </div>
 
@@ -129,7 +122,7 @@
                     </div>
 
                     <div class="card-vidro">
-                        <div class="moldura-imagem"><img src="11000623145.jpg" alt="Dino"></div>
+                        <div class="moldura-imagem"><img src="1000623145.jpg" alt="Dino"></div>
                         <div class="card-texto">
                             <h3>Dino Moldura</h3>
                             <p>Diversão garantida para quartos infantis.</p>
@@ -155,7 +148,7 @@
                 btn.innerHTML = "🔊 Som Ligado";
             } else {
                 audio.pause();
-                btn.innerHTML = "🔈 Som Mudo";
+                btn.innerHTML = "🔈 Ativar Som";
             }
         }
     </script>
