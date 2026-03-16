@@ -12,7 +12,7 @@
 <body>
 
     <audio id="musica-galeria" loop>
-        <source src="site.mp3" type="audio/mpeg">
+        <source src="musica-tranquila.mp3" type="audio/mpeg">
     </audio>
 
     <header class="header-premium">
@@ -122,11 +122,29 @@
                     </div>
 
                     <div class="card-vidro">
-                        <div class="moldura-imagem"><img src="10006231.jpg" alt="Dino"></div>
+                        <div class="moldura-imagem"><img src="11000623145.jpg" alt="Dino"></div>
                         <div class="card-texto">
                             <h3>Dino Moldura</h3>
                             <p>Diversão garantida para quartos infantis.</p>
                             <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20o%20Dino." target="_blank" class="btn-pedido">Encomendar</a>
+                        </div>
+                    </div>
+
+                    <div class="card-vidro">
+                        <div class="moldura-imagem"><img src="image_3.jpg" alt="Stitch Rosa"></div>
+                        <div class="card-texto">
+                            <h3>Stitch (Rosa)</h3>
+                            <p>A versão adorável e colorida em low-poly.</p>
+                            <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20o%20Stitch%20Rosa." target="_blank" class="btn-pedido">Encomendar</a>
+                        </div>
+                    </div>
+
+                    <div class="card-vidro">
+                        <div class="moldura-imagem"><img src="image_4.jpg" alt="Stitch Praia"></div>
+                        <div class="card-texto">
+                            <h3>Stitch (Praia)</h3>
+                            <p>O clássico alienígena em cenário tropical.</p>
+                            <a href="https://wa.me/5522992632887?text=Olá!%20Gostaria%20de%20encomendar%20o%20Stitch%20Praia." target="_blank" class="btn-pedido">Encomendar</a>
                         </div>
                     </div>
 
@@ -143,12 +161,13 @@
         function toggleAudio() {
             var audio = document.getElementById("musica-galeria");
             var btn = document.getElementById("controle-audio");
+            var icone = document.getElementById("icone-som");
             if (audio.paused) {
                 audio.play();
-                btn.innerHTML = "🔊 Som Ligado";
+                btn.innerHTML = "<span id='icone-som'>🔊</span> Som Ligado";
             } else {
                 audio.pause();
-                btn.innerHTML = "🔈 Ativar Som";
+                btn.innerHTML = "<span id='icone-som'>🔈</span> Ativar Som";
             }
         }
     </script>
